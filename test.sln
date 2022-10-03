@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{E5C00A68-E6DB-FEA3-938C-F34D364EA738}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OccaSoftware.SuperSimpleSkybox.Runtime", "OccaSoftware.SuperSimpleSkybox.Runtime.csproj", "{C85D392A-A78A-2B20-8455-5265886C2CD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OccaSoftware.SuperSimpleSkybox.Editor", "OccaSoftware.SuperSimpleSkybox.Editor.csproj", "{350E524C-50C6-915E-9485-0B0E213D8AFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5C00A68-E6DB-FEA3-938C-F34D364EA738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C00A68-E6DB-FEA3-938C-F34D364EA738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C00A68-E6DB-FEA3-938C-F34D364EA738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C00A68-E6DB-FEA3-938C-F34D364EA738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C85D392A-A78A-2B20-8455-5265886C2CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85D392A-A78A-2B20-8455-5265886C2CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85D392A-A78A-2B20-8455-5265886C2CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85D392A-A78A-2B20-8455-5265886C2CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{350E524C-50C6-915E-9485-0B0E213D8AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{350E524C-50C6-915E-9485-0B0E213D8AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{350E524C-50C6-915E-9485-0B0E213D8AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{350E524C-50C6-915E-9485-0B0E213D8AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
