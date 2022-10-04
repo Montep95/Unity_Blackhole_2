@@ -8,6 +8,7 @@ public class Collector : MonoBehaviour
 
     //test (2022-09-29 20:57)
     public GameObject Player;
+    public GameObject gameManager;
     public GameObject g_field; // 중력장(가시성) 키우기
     public GameObject MagnetCollider; // 실 중력장 키우기
     //private vector3 originscale; // 중력장 그래픽 원래 크기
@@ -47,7 +48,7 @@ public class Collector : MonoBehaviour
 
 
 
-    private void awake()
+    private void Awake()
     {
 
     }
@@ -78,8 +79,17 @@ public class Collector : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("star"));
 
             GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale += new Vector3(0.05f, 0.05f, 0);
-            Camera.main.orthographicSize += 0.5f;
-            
+            if (Camera.main.orthographicSize < 20.0f &&
+                (Camera.main.transform.position.x > -4.5 && Camera.main.transform.position.x < 4.5))
+            {
+                Camera.main.orthographicSize += 0.5f;
+            }
+            if (Player.GetComponent<Player>().moveSpeed > 0.4f)
+            {
+                Player.GetComponent<Player>().moveSpeed -= 0.2f;
+                gameManager.GetComponent<gameManager>().pushForce -= 0.2f;
+            }
+
             /* 별의 크기별 지정할 것 
             if (g_type == 1)
             {
@@ -112,7 +122,19 @@ public class Collector : MonoBehaviour
                 Debug.Log("블랙홀이 흡수됨");
                 Destroy(GameObject.FindGameObjectWithTag("b_star"));
                 GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale += new Vector3(0.3f, 0.3f, 0);
-                Camera.main.orthographicSize += 1.0f;
+                if(Camera.main.orthographicSize < 20.0f && 
+                    (Camera.main.transform.position.x > -4.5 && Camera.main.transform.position.x < 4.5))
+                {
+                    Camera.main.orthographicSize += 1.0f;
+
+                }
+                if(Player.GetComponent<Player>().moveSpeed > 0.4f)
+                {
+                    Player.GetComponent<Player>().moveSpeed -= 0.4f;
+                    gameManager.GetComponent<gameManager>().pushForce -= 0.2f;
+
+                }
+                
             }            
         }
 

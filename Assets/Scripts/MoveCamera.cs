@@ -48,10 +48,10 @@ public class MoveCamera : MonoBehaviour
 
         transform.position = new Vector3(clampX, clampY, -10f);
     
-        if((target.transform.localScale.x > 7) && (target.transform.localScale.y > 7))
-        {
-            size.x += 1;
-            size.y += 1;
-        }
+        //if((target.transform.localScale.x > 7) && (target.transform.localScale.y > 7))
+        //{
+        //    size.x += 1;
+        //    size.y += 1;
+        //}
     }
 }

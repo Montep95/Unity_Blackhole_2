@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8008a0a2203f16b49810c566702c0cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  star: {fileID: 0}
+  star: {fileID: 4182141078096413734, guid: 2bdb178577ebaf94d9372987b2dd7f1e, type: 3}
   col: {fileID: 0}
   b_star: {fileID: 4539826630137417013}
   influenceRange: 0

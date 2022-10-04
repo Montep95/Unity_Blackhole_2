@@ -25,7 +25,7 @@ public class gameManager : MonoBehaviour
     public Player player;
     public Trajectory trajectory;
 
-    [SerializeField] float pushForce = 1.0f;
+    [SerializeField] public float pushForce = 1.0f;
 
     bool isDragging = false;
 
@@ -72,7 +72,7 @@ public class gameManager : MonoBehaviour
         player.DesactivateRb();
 
         // 별 생성기
-        InvokeRepeating("makeStar", 0.0f, 1.0f); // 0초 후에 시작하여 1초마다 생성
+        InvokeRepeating("makeStar", 0.0f, 0.2f); // 0초 후에 시작하여 1초마다 생성
 
         // 큰 별 생성기
         InvokeRepeating("makeb_Star", 3.0f, 5.0f); // 3초 후에 시작하여 5초마다 생성

@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     // test (2022-09-29 13:44)
     bool hasTarget;
     Vector3 targetPosition;
-    float moveSpeed = 4f;
+    public float moveSpeed = 4.0f;
 
     public GameObject g_field;// 중력장(가시성) 키우기
     public GameObject MagnetCollider; // 중력장 키우기
