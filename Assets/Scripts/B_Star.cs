@@ -56,8 +56,8 @@ public class B_Star : MonoBehaviour
         b_starBody = b_star.GetComponent<Rigidbody2D>();
         //
 
-        float x = Random.Range(-6.0f, 6.0f);
-        float y = Random.Range(-9.0f, 9.0f);
+        float x = Random.Range(-18.0f, 18.0f);
+        float y = Random.Range(-23.0f, 23.0f);
 
         transform.position = new Vector3(x, y, 0);
 
@@ -69,11 +69,11 @@ public class B_Star : MonoBehaviour
         }
         else if (type == 2)
         {
-            size = 1.2f;
+            size = 1.5f;
         }
         else
         {
-            size = 1.7f;
+            size = 3.0f;
         }
         transform.localScale = new Vector3(size, size, 0);
     }

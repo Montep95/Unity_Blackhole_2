@@ -1,0 +1,302 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.11f1 (0a5ca18544bf) revision 679073'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'ko' Physical Memory: 15773 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/Gnob/test
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+10281
+Successfully changed project path to: C:/Users/Gnob/test
+C:/Users/Gnob/test
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 170.95 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Gnob/test/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon (TM) Graphics (ID=0x15e7)
+    Vendor:   ATI
+    VRAM:     7886 MB
+    Driver:   31.0.12019.15004
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56260
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002544 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 141.96 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.087 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1088ms)
+		BeginReloadAssembly (73ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (748ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (307ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (357ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (142ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (146ms)
+				ProcessInitializeOnLoadMethodAttributes (60ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.011001 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Gnob\test\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Gnob\test\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 140.34 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.581 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1582ms)
+		BeginReloadAssembly (100ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1364ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (288ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (69ms)
+			SetupLoadedEditorAssemblies (854ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (140ms)
+				BeforeProcessingInitializeOnLoad (130ms)
+				ProcessInitializeOnLoadAttributes (475ms)
+				ProcessInitializeOnLoadMethodAttributes (102ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 2.38 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5688 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 164 unused Assets / (1.3 MB). Loaded Objects now: 6052.
+Memory consumption went from 219.9 MB to 218.7 MB.
+Total: 5.986700 ms (FindLiveObjects: 0.564500 ms CreateObjectMapping: 0.228400 ms MarkObjects: 4.426400 ms  DeleteObjects: 0.765300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 47753.645941 seconds.
+  path: Assets/BlackHole-Vortex/Frames/BalckHole-Reddish Color-s/BH-RED_00021.png
+  artifactKey: Guid(5903dae3489332447bef9769a5ff3685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackHole-Vortex/Frames/BalckHole-Reddish Color-s/BH-RED_00021.png using Guid(5903dae3489332447bef9769a5ff3685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9257482213e7ffc85a613efb1130e313') in 0.155256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.611098 seconds.
+  path: Assets/BlackHole-Vortex/Frames/BlackHole-White-s/BlackHole-White_00021.png
+  artifactKey: Guid(ac8e47ab4000b8944bae3dc21e301127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackHole-Vortex/Frames/BlackHole-White-s/BlackHole-White_00021.png using Guid(ac8e47ab4000b8944bae3dc21e301127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c54ad500014a3f14c765a18c4636494') in 0.065487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.375360 seconds.
+  path: Assets/BlackHole-Vortex/Frames/BlackHole_Loop_small/BlackHole_00021.png
+  artifactKey: Guid(ea69dafc0dc4ac64b824de3f18af9e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackHole-Vortex/Frames/BlackHole_Loop_small/BlackHole_00021.png using Guid(ea69dafc0dc4ac64b824de3f18af9e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de35bfedce1d2621afdca02f8b8d124e') in 0.054992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.367083 seconds.
+  path: Assets/BlackHole-Vortex/Frames/BlackHole_Loop_small-2/BlackHole-2_00021.png
+  artifactKey: Guid(3a9afb3098358374b9a971e8367b0788) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackHole-Vortex/Frames/BlackHole_Loop_small-2/BlackHole-2_00021.png using Guid(3a9afb3098358374b9a971e8367b0788) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3591d94fcec3f07a01595916a616e826') in 0.060500 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.419625 seconds.
+  path: Assets/BlackHole-Vortex/Frames/BlackHole_Loop_small-3-s/BlackHole_Loop_small-3_00021.png
+  artifactKey: Guid(9a6e408d6b639434284cce38c1f13097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackHole-Vortex/Frames/BlackHole_Loop_small-3-s/BlackHole_Loop_small-3_00021.png using Guid(9a6e408d6b639434284cce38c1f13097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0d57667e25d2a69c25c7f9af8621a46') in 0.065220 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/BlackHole-Vortex/Frames/BlackHole_Loop_small-3-s/BlackHole_Loop_small-3_00024.png
+  artifactKey: Guid(34366edca57a8504194dda849806a829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackHole-Vortex/Frames/BlackHole_Loop_small-3-s/BlackHole_Loop_small-3_00024.png using Guid(34366edca57a8504194dda849806a829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d32391f9b3062873a8a49777f875d06') in 0.034203 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 69.124453 seconds.
+  path: Assets/BlackHole-Vortex/Frames/BlackHole_DarkBlue3/BH-4_00021.png
+  artifactKey: Guid(2a7e994107d9eb644be32cd2f8f488d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackHole-Vortex/Frames/BlackHole_DarkBlue3/BH-4_00021.png using Guid(2a7e994107d9eb644be32cd2f8f488d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca1d66b9c72fdaa21d4e5381dc3cce36') in 0.052619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/BlackHole-Vortex/Frames/BlackHole_DarkBlue3/BH-4_00023.png
+  artifactKey: Guid(65efdd65dbe6dc843ac5681c400c7ba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackHole-Vortex/Frames/BlackHole_DarkBlue3/BH-4_00023.png using Guid(65efdd65dbe6dc843ac5681c400c7ba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e91d8503b625bf22b731f293d218dc4c') in 0.036086 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.534123 seconds.
+  path: Assets/BlackHole-Vortex/Frames/BlackHole_Loop-s/BlackHole_Loop_00021.png
+  artifactKey: Guid(ff4080ba68093c34d8f795e85d1c94b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackHole-Vortex/Frames/BlackHole_Loop-s/BlackHole_Loop_00021.png using Guid(ff4080ba68093c34d8f795e85d1c94b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '146f473c5cef2c7d91aa7717673171b5') in 0.045582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/BlackHole-Vortex/Frames/BlackHole_Loop-s/BlackHole_Loop_00023.png
+  artifactKey: Guid(3eb8ae98e644a6644a09b0779b2835f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlackHole-Vortex/Frames/BlackHole_Loop-s/BlackHole_Loop_00023.png using Guid(3eb8ae98e644a6644a09b0779b2835f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e77543b383faa1c969e51e9bd7c8d6ef') in 0.038628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 105.368011 seconds.
+  path: Assets/OccaSoftware/SuperSimpleSkybox/DemoResources/Levels
+  artifactKey: Guid(a1f892c351bfa1f4ebce11584ec9fb49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OccaSoftware/SuperSimpleSkybox/DemoResources/Levels using Guid(a1f892c351bfa1f4ebce11584ec9fb49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a8913bdc1ddf5515b24bb861492c4be') in 0.007330 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.953908 seconds.
+  path: Assets/OccaSoftware/SuperSimpleSkybox/DemoResources/Levels/Skybox_P
+  artifactKey: Guid(5490758ebdb6fa34fb98ebac5ddd35a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OccaSoftware/SuperSimpleSkybox/DemoResources/Levels/Skybox_P using Guid(5490758ebdb6fa34fb98ebac5ddd35a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e838ace89333698edbdd6bed5e07fa2d') in 0.007411 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015165 seconds.
+  path: Assets/OccaSoftware/SuperSimpleSkybox/DemoResources/Levels/Skybox_P/Post-process Volume Profile.asset
+  artifactKey: Guid(8d46a902342089045869270e91f22949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OccaSoftware/SuperSimpleSkybox/DemoResources/Levels/Skybox_P/Post-process Volume Profile.asset using Guid(8d46a902342089045869270e91f22949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d5d6ef7742b2baef3139d286dd2e38b') in 0.024285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.605090 seconds.
+  path: Assets/OccaSoftware/SuperSimpleSkybox/DemoResources/Materials
+  artifactKey: Guid(e1e887b6ea92aa94eb7f6f48d1c87122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OccaSoftware/SuperSimpleSkybox/DemoResources/Materials using Guid(e1e887b6ea92aa94eb7f6f48d1c87122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '687a2b9e83dad8dec0fab373825a2a6a') in 0.007930 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.031130 seconds.
+  path: Assets/OccaSoftware/SuperSimpleSkybox/DemoResources/Materials/PlaneMaterial.mat
+  artifactKey: Guid(22e6d86fba8fdbe4f8a0008cb55f444e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OccaSoftware/SuperSimpleSkybox/DemoResources/Materials/PlaneMaterial.mat using Guid(22e6d86fba8fdbe4f8a0008cb55f444e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25ef06688e5014562ff4f372f4d439ce') in 0.231697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.284307 seconds.
+  path: Assets/OccaSoftware
+  artifactKey: Guid(40b233d5619408249b73f55fac336bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OccaSoftware using Guid(40b233d5619408249b73f55fac336bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '826314ad6ea696c2419a0631ce82ab4b') in 0.008395 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.634055 seconds.
+  path: Assets/OccaSoftware/SuperSimpleSkybox/AssetResources/Scripts/Editor
+  artifactKey: Guid(b11b832d43c98a345baec6fca7dcc633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OccaSoftware/SuperSimpleSkybox/AssetResources/Scripts/Editor using Guid(b11b832d43c98a345baec6fca7dcc633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1392370226b194c02c9afa76d105790d') in 0.007036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.050976 seconds.
+  path: Assets/OccaSoftware/SuperSimpleSkybox/AssetResources/Scripts/Editor/OccaSoftware.SuperSimpleSkybox.Editor.asmdef
+  artifactKey: Guid(5512dec9cea624b4082cbc641b42b2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OccaSoftware/SuperSimpleSkybox/AssetResources/Scripts/Editor/OccaSoftware.SuperSimpleSkybox.Editor.asmdef using Guid(5512dec9cea624b4082cbc641b42b2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3639ff78acc841688732503d27293e0') in 0.007607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 65.262400 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Decal.mat
+  artifactKey: Guid(31d0dcc6f2dd4e4408d18036a2c93862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Decal.mat using Guid(31d0dcc6f2dd4e4408d18036a2c93862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '077d7a30d79bb1b5d90b9ed01c6eedc4') in 0.068767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat
+  artifactKey: Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat using Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40307a69941d5eee3429d0fa6c599f71') in 0.512248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat
+  artifactKey: Guid(9dfc825aed78fcd4ba02077103263b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat using Guid(9dfc825aed78fcd4ba02077103263b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bed6cd72b70c0adca2dfe2ed648f24c7') in 0.018256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SimpleLit.mat
+  artifactKey: Guid(6a1143ee683302f4aa628c052723efc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SimpleLit.mat using Guid(6a1143ee683302f4aa628c052723efc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '134dbbd2098ab73d0b22b4aae49478ab') in 0.096907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat
+  artifactKey: Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat using Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da19f7e9d9ba569ec940d27b001378e') in 0.020398 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

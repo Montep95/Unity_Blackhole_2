@@ -100,29 +100,39 @@ public class Collector : MonoBehaviour
                 Camera.main.orthographicSize += 0.15f;
             }
             */
-            
-            
         }
 
-        // 블랙홀이 플레이어의 MagnetCollider 범위 안에 있으면,
-        if (collision.gameObject.TryGetComponent<B_Star>(out B_Star b_star))
+
+        // test - 블랙홀 흡수 조건
+        if (collision.gameObject.tag == "b_starColl")
         {
-            if (collision.gameObject.tag == "MagnetCollider")
+            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.0f > GameObject.FindGameObjectWithTag("b_star").transform.localScale.x
+                && GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.0f > GameObject.FindGameObjectWithTag("b_star").transform.localScale.y))
             {
-                if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.0f)
-                > (GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.x)
-                && (GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.0f)
-                > (GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.y))
-                {
-                    b_star.SetTarget(transform.parent.position);
-
-                    // 중력장 내 블랙홀과 닿지 않은 것도 destroy하는 문제
-                    Destroy(GameObject.FindGameObjectWithTag("b_star"));
-                    Debug.Log("블랙홀 파괴");
-                    GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale += new Vector3(0.3f, 0.3f, 0);
-                }
-            }
+                Debug.Log("블랙홀이 흡수됨");
+                Destroy(GameObject.FindGameObjectWithTag("b_star"));
+                GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale += new Vector3(0.3f, 0.3f, 0);
+                Camera.main.orthographicSize += 1.0f;
+            }            
         }
+
+        //// 블랙홀이 플레이어의 MagnetCollider 범위 안에 있으면,
+        //if (collision.gameObject.TryGetComponent<B_Star>(out B_Star bs))
+        //{
+        //    if (collision.gameObject.tag == "MagnetCollider")
+        //    {
+        //        if ((Player.transform.localScale.x + 3.0f > bs.transform.localScale.x) && (Player.transform.localScale.y + 3.0f > bs.transform.localScale.y))
+        //        {
+        //            Debug.Log("블랙홀 조건문 실행");
+        //            bs.SetTarget(transform.parent.position);
+
+        //            // 중력장 내 블랙홀과 닿지 않은 것도 destroy하는 문제
+        //            Destroy(GameObject.FindGameObjectWithTag("b_star"));
+        //            Debug.Log("블랙홀 파괴");
+        //            GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale += new Vector3(0.3f, 0.3f, 0);
+        //        }
+        //    }
+        //}
 
         /*
         // test - 블랙홀이 플레이어 중력장보다 작을경우 흡수되는 로직
@@ -145,12 +155,11 @@ public class Collector : MonoBehaviour
         }
         */
 
-        if (collision.gameObject.tag == "b_starColl")
-        {
-            panel.SetActive(true);
-            Time.timeScale = 0.0f; // Unity 모든 시간 Stop
-            // gameManager.I.retry();
-        }
+        //if (collision.gameObject.tag == "b_starColl")
+        //{            
+        //    panel.SetActive(true); // 재시작 패널 활성화
+        //    Time.timeScale = 0.0f; // Unity 모든 시간 Stop
+        //    // gameManager.I.retry();            
+        //}
     }
-
 }

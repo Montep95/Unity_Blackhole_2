@@ -17,7 +17,7 @@ public class gameManager : MonoBehaviour
     public GameObject Player;
     public GameObject g_field;
 
-    float limit = 15.0f; // time Text
+    float limit = 99.0f; // time Text
 
     Camera cam;
 
@@ -62,7 +62,7 @@ public class gameManager : MonoBehaviour
     void initGame()
     {
         Time.timeScale = 1.0f;
-        limit = 15.0f;
+        limit = 99.0f;
         totalScore = 0;
     }
     void Start()

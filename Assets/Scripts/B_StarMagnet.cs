@@ -16,8 +16,8 @@ public class B_StarMagnet : MonoBehaviour
         // 'Player'가 큰 별 Magnet 범위 안에 있으면,
         if (collision.gameObject.TryGetComponent<Player>(out Player Player))
         {
-            // 플레이어가 큰 별쪽으로 움직이도록
-            Player.SetTarget(transform.parent.position);
+            // 플레이어가 큰 별쪽으로 움직이도록 (기본코드)
+            // Player.SetTarget(transform.parent.position);
 
             //test - error
             // RigidBody AddForce
@@ -25,10 +25,10 @@ public class B_StarMagnet : MonoBehaviour
 
             // test - 블랙홀이 플레이어 중력장보다 작을경우 흡수되는 로직
             // Player's MagnetCollider = 0.25 == b_starColl = 1.2
-            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.0f)
-                > (GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.x - 2.0f)
-            && (GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.0f)
-            > (GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.y - 2.0f))
+            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 3.0f)
+                > (GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.x)
+            && (GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 3.0f)
+            > (GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.y))
             {
                 if (collision.gameObject.tag == "b_starColl")
                 {

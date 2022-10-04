@@ -54,7 +54,7 @@ public class Star : MonoBehaviour, ICollectible
         type = Random.Range(1, 4);
         if(type == 1)
         {
-            size = 0.5f;
+            size = 1.5f;
             score = 3;
 
             
