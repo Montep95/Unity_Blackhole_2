@@ -26,8 +26,8 @@ public class B_StarMagnet : MonoBehaviour
         // test - 만약 블랙홀과 부딪힌다면
         if (collision.gameObject.TryGetComponent<Player>(out Player player))
         {
-            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.5f < GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.x
-                && GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.5f < GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.y))
+            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.0f < GameObject.FindGameObjectWithTag("b_star").transform.localScale.x
+                && GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.0f < GameObject.FindGameObjectWithTag("b_star").transform.localScale.y))
             {
                 Debug.Log("플레이어가 블랙홀에 흡수되는 중");
                 
@@ -44,14 +44,14 @@ public class B_StarMagnet : MonoBehaviour
     }
 
 
-    /*
+    
     // OnTriggerEnter = 닿았을때 로직
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent<Player>(out Player player))
         {
-            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.5f < GameObject.FindGameObjectWithTag("b_star").transform.localScale.x
-                && GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.5f < GameObject.FindGameObjectWithTag("b_star").transform.localScale.y))
+            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.0f < GameObject.FindGameObjectWithTag("b_star").transform.localScale.x
+                && GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.0f < GameObject.FindGameObjectWithTag("b_star").transform.localScale.y))
             {
                 panel.SetActive(true); // 재시작 패널 활성화
                 Time.timeScale = 0.0f; // Unity 모든 시간 Stop
@@ -59,7 +59,6 @@ public class B_StarMagnet : MonoBehaviour
             }
         }
     }
-    */
     
 
     /*

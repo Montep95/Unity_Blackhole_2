@@ -91,6 +91,7 @@
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\DialogShare.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Windows\FBWindowsSoftKeyboardManager.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Windows\FBWindowsExampleTabsManager.cs" />
+    <Compile Include="Assets\Scripts\Orbit.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\GraphRequest.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AccessTokenMenu.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AppLinks.cs" />
@@ -98,7 +99,6 @@
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\Pay.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Windows\FBWindowsShareManager.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Windows\FBWindowsTournamentsManager.cs" />
-    <Compile Include="Assets\Scripts\Orbit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\FacebookSDK\Plugins\Windows\x64\libcurl.dll" />

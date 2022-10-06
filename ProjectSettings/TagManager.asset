@@ -8,6 +8,7 @@ TagManager:
   - b_star
   - b_starColl
   - MagnetCollider
+  - b_starMagnet
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,7 @@ public class B_StarCollector : MonoBehaviour
         // Collector와 반대의 조건 달기
         if (collision.gameObject.tag == "star")
         {
+            Debug.Log("블랙홀이 별을 먹음");
 
             // 중력장 내 블랙홀과 닿지 않은 것도 Destroy하는 문제
             // Destroy(GameObject.FindGameObjectWithTag("star"));

@@ -24,14 +24,6 @@ public class Collector : MonoBehaviour
     public GameObject b_starCollider;
     float cameraSize;
 
-    //test - Orbit
-    public int HasOrbit;
-    public int MaxHasOrbit;
-    public GameObject[] Orbits;
-    public float pushForce;
-    public float moveSpeed;
-
-
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public CircleCollider2D col;
 
@@ -52,14 +44,6 @@ public class Collector : MonoBehaviour
     private void Start()
     {
         cameraSize = Camera.main.orthographicSize;
-
-        //test - Orbit
-        HasOrbit = Player.GetComponent<Player>().HasOrbit;
-        MaxHasOrbit = Player.GetComponent<Player>().maxHasOrbit;
-        Orbits = Player.GetComponent<Player>().Orbits;
-        //float pushForce1 = gameManager.GetComponent<gameManager>().pushForce;
-        //pushForce = pushForce1;
-        moveSpeed = Player.GetComponent<Player>().moveSpeed;
     }
 
 
@@ -91,16 +75,9 @@ public class Collector : MonoBehaviour
         {
             Debug.Log("별이 흡수됨");
 
+            // 중력장 내 블랙홀과 닿지 않은 것도 Destroy하는 문제
+            // Destroy(GameObject.FindGameObjectWithTag("star"));
             Destroy(collision.gameObject);
-
-            // test - Orbit (타입 별 흡수 로직)
-            Star star = collision.GetComponent<Star>();
-            Orbits[HasOrbit].SetActive(true);
-            HasOrbit += 1;
-            if(HasOrbit == MaxHasOrbit)
-            {
-                HasOrbit = 0; // 인덱스 오류 해결
-            }
 
             // 중력장 키우기 로직
             GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale += new Vector3(0.02f, 0.02f, 0);
@@ -109,14 +86,14 @@ public class Collector : MonoBehaviour
             if (Camera.main.orthographicSize < 20.0f &&
                 (Camera.main.transform.position.x > -4.5 && Camera.main.transform.position.x < 4.5))
             {
-                Camera.main.orthographicSize += 0.25f;
+                Camera.main.orthographicSize += 0.5f;
             }
 
             // 플레이어(블랙홀) 감속 한계치 설정
-            if (moveSpeed > 0.4f)
+            if (Player.GetComponent<Player>().moveSpeed > 0.4f)
             {
-                moveSpeed -= 0.2f;
-                //pushForce -= 0.2f;
+                Player.GetComponent<Player>().moveSpeed -= 0.2f;
+                gameManager.GetComponent<gameManager>().pushForce -= 0.2f;
             }
 
             /* 별의 크기별 지정할 것 
@@ -145,26 +122,28 @@ public class Collector : MonoBehaviour
         // test - 블랙홀 흡수 조건
         if (collision.gameObject.tag == "b_starColl")
         {
-            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.5f > GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.x
-                && GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.5f > GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.y))
+            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.0f > GameObject.FindGameObjectWithTag("b_star").transform.localScale.x
+                && GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.0f > GameObject.FindGameObjectWithTag("b_star").transform.localScale.y))
             {
                 Debug.Log("블랙홀이 흡수됨");
 
                 // Destroy(GameObject.FindGameObjectWithTag("b_star"));
                 Destroy(collision.gameObject);
 
-                GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale += new Vector3(0.1f, 0.1f, 0);
+                GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale += new Vector3(0.15f, 0.15f, 0);
                 if(Camera.main.orthographicSize < 20.0f && 
                     (Camera.main.transform.position.x > -4.5 && Camera.main.transform.position.x < 4.5))
                 {
-                    Camera.main.orthographicSize += 0.5f;
+                    Camera.main.orthographicSize += 1.0f;
 
                 }
-                // 플레이어(블랙홀) 감속 한계치 설정
-                if (moveSpeed > 0.4f)
+                if(Player.GetComponent<Player>().moveSpeed > 0.4f)
                 {
-                    moveSpeed -= 0.2f;
-                    //pushForce -= 0.2f;
+                    Player.GetComponent<Player>().moveSpeed -= 0.4f;
+                    
+                    // 참조오류
+                    // gameManager.GetComponent<gameManager>().pushForce -= 0.2f;
+
                 }
             }            
         }
