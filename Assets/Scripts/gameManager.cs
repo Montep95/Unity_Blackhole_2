@@ -25,7 +25,9 @@ public class gameManager : MonoBehaviour
     public Player player;
     public Trajectory trajectory;
 
-    [SerializeField] public float pushForce = 1.0f;
+    // SerializeField -> None 변경 (2022-10-05 22:17)
+    //[SerializeField] public float pushForce = 1.0f;
+    public float pushForce = 1.0f;
 
     bool isDragging = false;
 
@@ -72,12 +74,11 @@ public class gameManager : MonoBehaviour
         player.DesactivateRb();
 
         // 별 생성기
-        InvokeRepeating("makeStar", 0.0f, 0.2f); // 0초 후에 시작하여 1초마다 생성
+        InvokeRepeating("makeStar", 0.0f, 0.2f); // 0초 후에 시작하여 0.2초마다 생성
 
         // 큰 별 생성기
-        InvokeRepeating("makeb_Star", 3.0f, 5.0f); // 3초 후에 시작하여 5초마다 생성
+        InvokeRepeating("makeb_Star", 3.0f, 4.0f); // 3초 후에 시작하여 4초마다 생성
     }
-
     void makeStar()
     {
         Instantiate(star);
@@ -130,7 +131,7 @@ public class gameManager : MonoBehaviour
         trajectory.Show();
     }
 
-    void OnDrag()
+    public void OnDrag()
     {
         endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
         distance = Vector2.Distance(startPoint, endPoint);

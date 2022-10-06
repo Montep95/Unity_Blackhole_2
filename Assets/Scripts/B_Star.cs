@@ -32,7 +32,7 @@ public class B_Star : MonoBehaviour
     
     Rigidbody2D rb;
 
-    bool hasTarget;
+    public bool hasTarget;
     Vector3 targetPosition;
     float moveSpeed = 0.5f;
 
@@ -56,8 +56,8 @@ public class B_Star : MonoBehaviour
         b_starBody = b_star.GetComponent<Rigidbody2D>();
         //
 
-        float x = Random.Range(-18.0f, 18.0f);
-        float y = Random.Range(-23.0f, 23.0f);
+        float x = Random.Range(-31.0f, 31.0f);
+        float y = Random.Range(13.0f, 47.0f);
 
         transform.position = new Vector3(x, y, 0);
 
@@ -65,7 +65,7 @@ public class B_Star : MonoBehaviour
         type = Random.Range(1, 4);
         if (type == 1)
         {
-            size = 0.8f;
+            size = 0.5f;
         }
         else if (type == 2)
         {
@@ -73,7 +73,7 @@ public class B_Star : MonoBehaviour
         }
         else
         {
-            size = 3.0f;
+            size = 3.5f;
         }
         transform.localScale = new Vector3(size, size, 0);
     }
@@ -103,31 +103,4 @@ public class B_Star : MonoBehaviour
     {
 
     }
-
-
-    /*
-    // Trigger -> Collision 
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        // star 태그에 닿으면 큰 블랙홀 크기 증가
-        if (collision.gameObject.tag == "star")
-        {
-            transform.localScale = new Vector3(transform.localScale.x + 0.3f * 1 * Time.deltaTime,
-                                            transform.localScale.y + 0.3f * 1 * Time.deltaTime, 0);
-            // star 제거 - 미작동
-            Destroy(star);
-        }
-    }
-
-    // Trigger -> Collision
-    public void OnCollisionExit2D(Collision2D collision)
-    {
-        // star 태그가 큰 블랙홀 벗어나면 크기 다시감소
-        if (collision.gameObject.tag == "star")
-        {
-            transform.localScale = new Vector3(transform.localScale.x - 0.3f * 1 * Time.deltaTime,
-                                            transform.localScale.y - 0.3f * 1 * Time.deltaTime, 0);
-        }
-    }
-    */
 }

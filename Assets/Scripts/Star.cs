@@ -45,8 +45,8 @@ public class Star : MonoBehaviour, ICollectible
 
     void Start()
     {
-        float x = Random.Range(-6.0f, 6.0f);
-        float y = Random.Range(-9.0f, 9.0f);
+        float x = Random.Range(-18.0f, 18.0f);
+        float y = Random.Range(-23.0f, 23.0f);
 
         transform.position = new Vector3(x, y, 0);
 
@@ -54,21 +54,21 @@ public class Star : MonoBehaviour, ICollectible
         type = Random.Range(1, 4);
         if(type == 1)
         {
-            size = 1.5f;
+            size = 1.0f;
             score = 3;
 
             
         }
         else if (type == 2)
         {
-            size = 0.3f;
+            size = 0.5f;
             score = 2;
 
             
         }
         else
         {
-            size = 0.1f;
+            size = 0.2f;
             score = 1;
 
             

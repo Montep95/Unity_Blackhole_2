@@ -433,6 +433,7 @@
 "Assets/Scripts/ICollectible.cs"
 "Assets/Scripts/Magnet.cs"
 "Assets/Scripts/MoveCamera.cs"
+"Assets/Scripts/Orbit.cs"
 "Assets/Scripts/panel.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/Star.cs"

@@ -5,18 +5,6 @@ using UnityEngine.UI;
 
 public class B_StarCollector : MonoBehaviour
 {
-    /*
-    public GameObject g_field;// 중력장(가시성) 키우기
-    public GameObject MagnetCollider; // 중력장 키우기
-    */
-
-    /*test
-    public GameObject panel;
-    public GameObject star;
-    public GameObject b_star;
-    public GameObject b_starCollider;
-    */
-
     // private -> public 변경 (2022-09-29 13:41)
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,5 +16,15 @@ public class B_StarCollector : MonoBehaviour
         }
 
         // Collector와 반대의 조건 달기
+        if (collision.gameObject.tag == "star")
+        {
+
+            // 중력장 내 블랙홀과 닿지 않은 것도 Destroy하는 문제
+            // Destroy(GameObject.FindGameObjectWithTag("star"));
+            Destroy(collision.gameObject);
+
+            // '적 블랙홀 성장중' 로직
+            GameObject.FindGameObjectWithTag("b_star").transform.localScale += new Vector3(0.02f, 0.02f, 0);
+        }
     }
 }

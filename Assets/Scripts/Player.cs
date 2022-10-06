@@ -19,6 +19,11 @@ public class Player : MonoBehaviour
     public GameObject b_star;
     public GameObject b_starCollider;
 
+    // test (Add Orbit)
+    public GameObject[] Orbits;
+    public int HasOrbit;
+    public int maxHasOrbit;
+
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public CircleCollider2D col;
     [HideInInspector] public Vector3 pos

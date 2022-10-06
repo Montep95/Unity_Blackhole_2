@@ -5,43 +5,66 @@ using UnityEngine;
 public class B_StarMagnet : MonoBehaviour
 {
     public GameObject b_star;
-    
+    public GameObject panel;
+    public GameObject gameManager;
+
     //test
     [HideInInspector] public Rigidbody2D rb;
     Vector2 force;
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    // OnTriggerStay = 흡수되는 로직
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        // 'Player'가 큰 별 Magnet 범위 안에 있으면,
-        if (collision.gameObject.TryGetComponent<Player>(out Player Player))
+        // 만약 별과 부딪힌다면
+        if (collision.gameObject.TryGetComponent<Star>(out Star star))
         {
-            // 플레이어가 큰 별쪽으로 움직이도록 (기본코드)
-            // Player.SetTarget(transform.parent.position);
+            // 별이 플레이어쪽으로 움직이도록
+            star.SetTarget(transform.parent.position);
 
-            //test - error
-            // RigidBody AddForce
-            // rb.AddForce(force, ForceMode2D.Impulse);
+        }
 
-            // test - 블랙홀이 플레이어 중력장보다 작을경우 흡수되는 로직
-            // Player's MagnetCollider = 0.25 == b_starColl = 1.2
-            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 3.0f)
-                > (GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.x)
-            && (GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 3.0f)
-            > (GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.y))
+        // test - 만약 블랙홀과 부딪힌다면
+        if (collision.gameObject.TryGetComponent<Player>(out Player player))
+        {
+            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.5f < GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.x
+                && GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.5f < GameObject.FindGameObjectWithTag("b_starColl").transform.localScale.y))
             {
-                if (collision.gameObject.tag == "b_starColl")
-                {
-                    Player.SetTarget(transform.parent.position);
+                Debug.Log("플레이어가 블랙홀에 흡수되는 중");
+                
+                player.SetTarget(transform.parent.position);
 
-                    // 중력장 내 블랙홀과 닿지 않은 것도 destroy하는 문제
-                    Destroy(GameObject.FindGameObjectWithTag("b_star"));
-                    Debug.Log("블랙홀 파괴");
-                    GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale += new Vector3(0.3f, 0.3f, 0);
+                // test - 플레이어가 흡수될때 마우스 클릭이 발생하면 타겟을 해제하는 로직 
+                // (2022-10-05 22:51) - XXX
+                if (Input.GetMouseButtonDown(0))
+                {
+                    b_star.GetComponent<B_Star>().hasTarget = false;
                 }
             }
         }
+    }
 
+
+    /*
+    // OnTriggerEnter = 닿았을때 로직
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<Player>(out Player player))
+        {
+            if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x + 1.5f < GameObject.FindGameObjectWithTag("b_star").transform.localScale.x
+                && GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y + 1.5f < GameObject.FindGameObjectWithTag("b_star").transform.localScale.y))
+            {
+                panel.SetActive(true); // 재시작 패널 활성화
+                Time.timeScale = 0.0f; // Unity 모든 시간 Stop
+                                       // gameManager.I.retry();
+            }
+        }
+    }
+    */
+    
+
+    /*
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         // '별' 들이 블랙홀의 Magnet 범위 안에 있으면,
         if (collision.gameObject.TryGetComponent<Star>(out Star star))
         {
@@ -54,29 +77,6 @@ public class B_StarMagnet : MonoBehaviour
 
 
         }
-
-        /*
-        // test - 블랙홀이 플레이어 중력장보다 작을경우 흡수되는 로직
-        if ((GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.x)
-            > (GameObject.FindGameObjectWithTag("b_star").transform.localScale.x)
-        && (GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale.y)
-        > (GameObject.FindGameObjectWithTag("b_star").transform.localScale.y))
-        {
-            if (collision.gameObject.TryGetComponent<B_Star>(out B_Star b_star))
-            {
-                if (collision.gameObject.tag == "b_star")
-                {
-                    b_star.SetTarget(transform.parent.position);
-                    // 중력장 내 블랙홀과 닿지 않은 것도 destroy하는 문제
-                    Destroy(GameObject.FindGameObjectWithTag("b_star"));
-                    Debug.Log("블랙홀 파괴");
-                    GameObject.FindGameObjectWithTag("MagnetCollider").transform.localScale += new Vector3(0.3f, 0.3f, 0);
-                }
-            }
-        }
-        */
     }
-
-
-
+    */
 }
